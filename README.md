@@ -1,4 +1,4 @@
 # .github
 
-This repository contains the [public organization
-profile](https://github.com/shikanime-studio).
+This repository contains the public organization profile, assets and other
+metadata for [Shikanime Studio](https://github.com/shikanime-studio).
