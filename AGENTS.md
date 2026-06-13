@@ -1,4 +1,4 @@
-# .github
+# GitHub
 
 Organization profile and metadata for Shikanime Studio.
 Contains the public README, shared GitHub configuration, and organizational assets.
