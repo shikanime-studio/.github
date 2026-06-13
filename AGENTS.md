@@ -1,15 +1,35 @@
 # .github
 
 Organization profile and metadata for Shikanime Studio.
+Contains the public README, shared GitHub configuration, and organizational assets.
 
 **Language:** Nix
 
-**Structure:** `README.md` — org profile; `workflows/` — shared CI templates
+## Structure
 
-**Commit style:** Plain-text capitalized title, no prefix. Body with labels: `Design:`, `Related:`, `Closes #`.
+- `README.md` — Organization profile README displayed on the GitHub org page
+- `workflows/` — Shared or template workflow configurations
 
-**Stack:** 1 commit == 1 PR via ghstack. Amend + `ghstack` to resubmit. `ghstack land` on head PR to land stack. Never `gh pr merge`. Never force-push.
+## Commit Style
 
-**Protect `main`:** 1 review, linear history, signed commits, squash+rebase only.
+- Plain-text capitalized title, no conventional-commit prefix
+- Body with labels: `Design:`, `Related:`, `Closes #`
+- Keep Markdown lines wrapped at 80 columns and run `nix fmt` before shipping
+
+## Stack
+
+- 1 commit == 1 PR via ghstack
+- Amend + `ghstack` to resubmit
+- `ghstack land` on head PR to land the entire stack
+- Never `gh pr merge` (creates poisoned commits)
+- Never force-push ghstack branches
+- ghstack only works on HEAD commit chains, not detached HEADs
+
+## Protect `main`
+
+- Require 1 approving review
+- Require linear history (no merge commits)
+- Require signed commits
+- Squash+rebase merge only
 
 *Informational repo; changes are mostly to the org profile README*
