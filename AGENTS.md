@@ -31,7 +31,7 @@ Contains the public README, shared GitHub configuration, and organizational asse
 - Never force-push ghstack branches
 
 
- `main`
+## Protect `main`
 
 - Require 1 approving review
 - Require linear history (no merge commits)
