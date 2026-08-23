@@ -1,6 +1,5 @@
 {
   inputs = {
-    automata.url = "github:shikanime-studio/automata";
     devenv.url = "github:cachix/devenv";
     devlib.url = "github:shikanime-studio/devlib";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -40,8 +39,6 @@
       ];
       perSystem = _: {
         devenv.shells.default.imports = [
-          devlib.devenvModules.docs
-          devlib.devenvModules.formats
           devlib.devenvModules.git
           devlib.devenvModules.nix
           devlib.devenvModules.shikanime-studio
@@ -49,7 +46,6 @@
       };
       systems = [
         "x86_64-linux"
-        "x86_64-darwin"
         "aarch64-linux"
         "aarch64-darwin"
       ];
