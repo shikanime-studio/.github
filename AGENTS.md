@@ -33,8 +33,6 @@ Contains the public README, shared GitHub configuration, and organizational asse
 - Never `gh pr merge` on a stacked PR — only `gh stack merge` lands stacks.
 - Never force-push stack branches; `gh stack` owns the branch pointers.
 
-
-
 ## Editing Pull Requests
 
 - The commit title and description **are** the pull request title and body.
@@ -44,6 +42,7 @@ Contains the public README, shared GitHub configuration, and organizational asse
   - `gh pr edit <PR_NUMBER> --body-file /path/to/file.md` — set body from file
 - Amending the commit (`jj squash` / `git commit --amend`) and resubmitting
   with `ghstack` will also update the PR automatically.
+
 ## Protect `main`
 
 - Require 1 approving review
@@ -51,7 +50,8 @@ Contains the public README, shared GitHub configuration, and organizational asse
 - Require signed commits
 - Squash+rebase merge only
 
-*Informational repo; changes are mostly to the org profile README*
+Informational repo; changes are mostly to the org profile README
+
 ## Environment
 
 This repository ships a `.envrc` for direnv. Run `direnv allow` once after
