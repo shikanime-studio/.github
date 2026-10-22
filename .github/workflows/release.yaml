@@ -33,7 +33,6 @@ jobs:
   release:
     if: (startsWith(github.ref, 'refs/tags/v')) || (github.event_name == 'workflow_dispatch' && startsWith(github.event.inputs.ref_name, 'v'))
     needs:
-      - skaffold
       - nix
     permissions:
       contents: write
@@ -58,10 +57,3 @@ jobs:
           github-token: ${{ steps.createGithubAppToken.outputs.token }}
           ref: ${{ github.ref_name || github.event.inputs.ref_name }}
           repo: ${{ github.repository }}
-  skaffold:
-    permissions:
-      contents: read
-      packages: write
-    secrets:
-      OPERATOR_PRIVATE_KEY: ${{ secrets.OPERATOR_PRIVATE_KEY }}
-    uses: $/.github/workflows/skaffold.yaml
